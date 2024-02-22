@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT</title>
+    <script>
+        const tota1=Number(localStorage.getItem('tot1'));
+        const tota2=Number(localStorage.getItem('tot2'));
+        const total= tota1+tota2;
+
+        function price(){
+            document.getElementById('totale').innerText=total;
+            localStorage.setItem("tot1",String(total));
+        } 
+    </script>
+    <style>
+        h1{
+            color:rgb(207, 0, 0);
+            font-family:'Times New Roman';
+            font-size:30px;
+            margin-left: 14px;
+        }
+        body{
+            background:linear-gradient(rgb(4, 194, 178),rgb(3, 213, 98))
+        }
+        button:hover{
+            color:blue;
+        }
+        button:clicked{
+            color:rgb(255, 0, 102);
+        }
+        #totale{
+            font-size:20px;
+            font-weight: lighter;
+        }
+        p{
+            font-family: 'Times New Roman';
+            font-weight: bold;
+            font-size: 15px;
+        }
+        label{
+            font-weight: bold;
+        }
+        img{
+            border-radius: 40px;
+        }
+        #next{
+            margin-left:600px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+</br>
+    <h1>YOUR TOTAL IS:</h1>
+   <p><span id="totale">0</span>  KSH</p>
+   <input type="button" value="VIEW TOTAL" onclick="price()">
+    </br>
+    <form name="info" method="post" action="default">
+        <label for="location">LOCATION:</label>
+        <input type="text" id="location">
+    </br>
+    <label for="payment">choose payment type:</label>
+</br>
+<img src="Cash.jpeg" alt="cash">
+<label for="payment">cash</label>
+    <input type="radio" name="choice" value="cash">
+</br>
+<img src="Mpesa.png" alt="cash">
+<label for="payment">M-PESA</label>
+    <input type="radio" name="choice" value="M-PESA">
+</br>
+<img src="MasterCard.jpeg" alt="cash">
+<label for="payment">master-card</label>
+    <input type="radio" name="choice" value="master-card">
+<label for="payment">mastercard-number:</label>
+<input type="text" id="mastercard-number">
+</br>
+<a href="file:///C:/Users/HP/Documents/programmes/javascript%20&%20html/KFC/thanks.html"><input type="button" id="next" value="FINISH" ></a>
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOS POLLOS</title>
+    <script>
+        let total =0;
+        function price(value){
+            total += value;
+            document.getElementById('totale').innerText=total;
+            localStorage.setItem("tot1",String(total));
+        } 
+    </script>
+    <style>
+        h1{
+            color:green;
+            font-family:'Times New Roman', Times, serif;
+            font-size:40px;
+            margin-left: 180px;
+        }
+        img{
+            margin-left: 200px;
+            border-radius: 40px;
+        }
+        body{
+            background:linear-gradient(rgb(4, 194, 178),rgb(3, 213, 98))
+        }
+        input{
+            margin-left: 260px;  
+        }
+        button:hover{
+            color:blue;
+        }
+        button:clicked{
+            color:rgb(255, 0, 102);
+        }
+        #food{
+            color:blue;
+        }
+        #next{
+            margin-left:600px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>WELCOME TO KENYAN FRIED CHILDREN(KFC)</h1>
+    <h1 id ='food'>Choose your food</h1>
+    <form name="food" method="post" action="default">
+        <img src="Chicken.jpeg" alt="chicken bucket large" >
+    </br>
+        <input type="button" value="200KSH" id="bucket" onclick="price(200)">
+        </br>
+        <img src="Fillet.jpeg" alt="chicken fingers" >
+    </br>
+        <input type="button" value="150KSH" onclick="price(150)">
+        </br>
+        <img src="Chips.jpeg" alt="chicken bucket small" >
+    </br>
+        <input type="button" value="290KSH" onclick="price(290)">
+        </br>
+        <img src="Shawarma.jpeg" alt="chicken shawarma" >
+    </br>
+        <input type="button" value="300KSH" onclick="price(300)">
+        </br>
+        <img src="Egg.jpeg" alt="fried eggs" >
+    </br>
+        <input type="button" value="80KSH" onclick="price(80)">
+        </br>
+        <a href="file:///C:/Users/HP/Documents/programmes/javascript%20&%20html/KFC/beverage.html">
+        <input type="button" value="NEXT" id="next"></a>
+        
+
+    </form>
+    <p>TOTAL:<span id="totale">0</span></p>
+   
+</body>
+</html>
